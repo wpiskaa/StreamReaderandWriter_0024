@@ -5,11 +5,15 @@ using namespace std;
 
 int main(){
     string baris;
+    string namaFile;
+
+    cout << "Masukkan nama file: ";
+    cin >> namaFile;  
 
     //operasi file dalam mode menulis
     ofstream outfile;
     //menunjuk ke sebuah nama file untuk membaca
-    outfile.open("contohfile.txt");
+    outfile.open(namaFile + ".txt");
 
     cout << ">= Menulis file, \'q\' untuk keluar" << endl;
 
@@ -28,7 +32,7 @@ while (true) {
 
     //operasi file dalam mode membaca
     ifstream infile;
-    infile.open("contohfile.txt");
+    infile.open(namaFile + ".txt");
     //menunjuk ke sebuah file untuk membuka
     cout << endl << ">= Membuka dan membaca file " << endl;
     //Jika file ada maka
