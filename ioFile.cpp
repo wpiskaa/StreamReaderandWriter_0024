@@ -25,4 +25,22 @@ while (true) {
     }
     //selesai dalam menulis sekarang tutup filenya
     outfile.close();
+
+    //operasi file dalam mode membaca
+    ifstream infile;
+    infile.open("contohfile.txt");
+    //menunjuk ke sebuah file untuk membuka
+    cout << endl << ">= Membuka dan membaca file " << endl;
+    //Jika file ada maka
+    if (infile.is_open())
+    {
+        //melakukan perulanga setiap baris
+        while (getline(infile, baris))
+        {
+            //dan tampilkan disini
+            cout << baris << '\n';
+        }
+        //tutup file tersebut setelah selesai
+        infile.close();
+    }
 }
